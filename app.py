@@ -91,13 +91,13 @@ h1, h2, h3, h4, h5, h6, p, label, span {
 """
 st.markdown(page_theme, unsafe_allow_html=True)
 
-# ================= MODEL LOAD =================
+# ================= LOAD MODEL =================
 @st.cache_resource
 def load_my_model():
     model_path = hf_hub_download(
         repo_id="coconud/garbage-classification-VGG16-model",
         filename="model_VGG16.keras",
-        token=st.secrets["HF_TOKEN"]  # Token disimpan di Streamlit Secrets
+        token=st.secrets["HF_TOKEN"] # Token dari Hugging Face
     )
     return load_model(model_path)
 
@@ -117,7 +117,6 @@ uploaded_file = st.file_uploader("📤 Upload Gambar", type=["jpg", "png", "jpeg
 if uploaded_file is not None:
     img = Image.open(uploaded_file).convert('RGB')
 
-    # Tampilkan gambar di tengah
     col1, col2, col3 = st.columns([1,2,1])
     with col2:
         st.image(img.resize((224, 224)), caption="📷 Gambar yang diupload", use_container_width=False)
@@ -149,5 +148,6 @@ if uploaded_file is not None:
         st.warning("⚠️ Model cukup yakin, tapi masih ada kemungkinan salah.")
     else:
         st.error("❌ Model kurang yakin, coba gunakan gambar yang lebih jelas.")
+
 
 
