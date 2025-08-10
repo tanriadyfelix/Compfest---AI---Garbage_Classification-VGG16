@@ -31,7 +31,7 @@ page_theme = """
     border-radius: 15px;
 }
 
-/* ===== Teks lebih kontras ===== */
+/* ===== Teks ===== */
 h1, h2, h3, h4, h5, h6, p, label, span {
     color: #1B5E20 !important; 
 }
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p, label, span {
     background-color: #1B5E20;
 }
 
-/* ===== Nama file & ukuran file jadi hitam ===== */
+/* ===== Nama file uploaded ===== */
 [data-testid="stFileUploaderFileName"] {
     color: black !important;
     font-weight: normal !important;
@@ -148,6 +148,7 @@ if uploaded_file is not None:
         st.warning("⚠️ Model cukup yakin, tapi masih ada kemungkinan salah.")
     else:
         st.error("❌ Model kurang yakin, coba gunakan gambar yang lebih jelas.")
+
 
 
 
