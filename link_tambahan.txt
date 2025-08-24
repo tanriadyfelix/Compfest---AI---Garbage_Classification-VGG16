@@ -1,0 +1,10 @@
+Beberapa link yg digunakan dalam proyek ini:
+
+Hugging Face: -> untuk simpan model spya bisa dipake streamlit
+https://huggingface.co/coconud/garbage-classification-VGG16-model/tree/main
+
+Google Drive: isinya kode, file dataset yg displit, model, dkk
+https://drive.google.com/drive/folders/1QvhziNa8FRFlJ4WMMg6XZnemvsWog36i
+
+Link Dataset Kaggle:
+https://www.kaggle.com/datasets/mostafaabla/garbage-classification
